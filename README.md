@@ -15,4 +15,4 @@ If you have python installed, in the example directory you can run the following
 
 `python -m SimpleHTTPServer`
 
-Then visit http://localhost:8000 to see the router in action.
+Then visit [http://localhost:8000](http://localhost:8000) to see the router in action.
