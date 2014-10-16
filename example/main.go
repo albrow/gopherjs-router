@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"github.com/albrow/gopherjs-router"
-	"time"
 )
 
 func main() {
@@ -23,8 +22,6 @@ func main() {
 	r.HandleFunc("/faq", func() {
 		fmt.Println("At faq page!")
 	})
-
-	time.Sleep(1 * time.Second)
 
 	// Start listening for changes
 	r.Start()

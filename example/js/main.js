@@ -11890,9 +11890,9 @@ $packages["fmt"] = (function() {
 	};
 	return $pkg;
 })();
-$packages["github.com/albrow/router"] = (function() {
+$packages["github.com/albrow/gopherjs-router"] = (function() {
 	var $pkg = {}, js = $packages["github.com/gopherjs/gopherjs/js"], strings = $packages["strings"], time = $packages["time"], Router, getHash, setHash, New;
-	Router = $pkg.Router = $newType(0, "Struct", "router.Router", "Router", "github.com/albrow/router", function(routes_) {
+	Router = $pkg.Router = $newType(0, "Struct", "router.Router", "Router", "github.com/albrow/gopherjs-router", function(routes_) {
 		this.$val = this;
 		this.routes = routes_ !== undefined ? routes_ : false;
 	});
@@ -11949,16 +11949,16 @@ $packages["github.com/albrow/router"] = (function() {
 	};
 	Router.prototype.hashChanged = function(hash) { return this.$val.hashChanged(hash); };
 	$pkg.$init = function() {
-		($ptrType(Router)).methods = [["HandleFunc", "HandleFunc", "", $funcType([$String, ($funcType([], [], false))], [], false), -1], ["Start", "Start", "", $funcType([], [], false), -1], ["hashChanged", "hashChanged", "github.com/albrow/router", $funcType([$String], [], false), -1], ["legacyWatchHash", "legacyWatchHash", "github.com/albrow/router", $funcType([], [], false), -1], ["setInitialHash", "setInitialHash", "github.com/albrow/router", $funcType([], [], false), -1], ["watchHash", "watchHash", "github.com/albrow/router", $funcType([], [], false), -1]];
-		Router.init([["routes", "routes", "github.com/albrow/router", ($mapType($String, ($funcType([], [], false)))), ""]]);
+		($ptrType(Router)).methods = [["HandleFunc", "HandleFunc", "", $funcType([$String, ($funcType([], [], false))], [], false), -1], ["Start", "Start", "", $funcType([], [], false), -1], ["hashChanged", "hashChanged", "github.com/albrow/gopherjs-router", $funcType([$String], [], false), -1], ["legacyWatchHash", "legacyWatchHash", "github.com/albrow/gopherjs-router", $funcType([], [], false), -1], ["setInitialHash", "setInitialHash", "github.com/albrow/gopherjs-router", $funcType([], [], false), -1], ["watchHash", "watchHash", "github.com/albrow/gopherjs-router", $funcType([], [], false), -1]];
+		Router.init([["routes", "routes", "github.com/albrow/gopherjs-router", ($mapType($String, ($funcType([], [], false)))), ""]]);
 	};
 	return $pkg;
 })();
-$packages["main"] = (function() {
-	var $pkg = {}, fmt = $packages["fmt"], router = $packages["github.com/albrow/router"], main;
+$packages["/Users/alex/programming/go/src/github.com/albrow/gopherjs-router/example"] = (function() {
+	var $pkg = {}, fmt = $packages["fmt"], router = $packages["github.com/albrow/gopherjs-router"], main;
 	main = function() {
 		var r;
-		fmt.Println(new ($sliceType($emptyInterface))([new $String("Starting")]));
+		fmt.Println(new ($sliceType($emptyInterface))([new $String("Starting...")]));
 		r = router.New();
 		r.HandleFunc("/", (function() {
 			fmt.Println(new ($sliceType($emptyInterface))([new $String("At home page!")]));
@@ -11989,7 +11989,7 @@ $packages["main"] = (function() {
 		$packages["strconv"].$init();
 		$packages["reflect"].$init();
 		$packages["fmt"].$init();
-		$packages["github.com/albrow/router"].$init();
+		$packages["github.com/albrow/gopherjs-router"].$init();
 		$pkg.$init();
 		main();
 	};
@@ -11997,7 +11997,7 @@ $packages["main"] = (function() {
 	};
 	return $pkg;
 })();
-$go($packages["main"].$run, [], true);
+$go($packages["/Users/alex/programming/go/src/github.com/albrow/gopherjs-router/example"].$run, [], true);
 
 })();
 //# sourceMappingURL=main.js.map
