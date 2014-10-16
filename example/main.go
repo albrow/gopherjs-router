@@ -1,12 +1,14 @@
 package main
 
 import (
-	"fmt"
 	"github.com/albrow/gopherjs-router"
+	"github.com/gopherjs/jquery"
 )
 
+var jq = jquery.NewJQuery
+
 func main() {
-	fmt.Println("Starting...")
+	print("Starting...")
 
 	// Create a new router
 	r := router.New()
@@ -14,15 +16,17 @@ func main() {
 	// Add some routes. For now, they
 	// will just write messages to the console
 	r.HandleFunc("/", func() {
-		fmt.Println("At home page!")
+		print("At home page!")
+		jq("#current-page").SetHtml("Home Page")
 	})
 	r.HandleFunc("/about", func() {
-		fmt.Println("At about page!")
+		print("At about page!")
+		jq("#current-page").SetHtml("About Page")
 	})
 	r.HandleFunc("/faq", func() {
-		fmt.Println("At faq page!")
+		print("At faq page!")
+		jq("#current-page").SetHtml("FAQ Page")
 	})
 
-	// Start listening for changes
 	r.Start()
 }
