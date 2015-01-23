@@ -13,7 +13,7 @@ type Router struct {
 }
 
 func getHash() string {
-	return js.Global.Get("location").Get("hash").Str()
+	return js.Global.Get("location").Get("hash").String()
 }
 
 func setHash(string) {
